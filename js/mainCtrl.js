@@ -1,3 +1,4 @@
-angular.module('quoteBook').controller('mainCtrl', function($scope){
-$scope.test = "I'm working!"
-});
+angular.module("quoteBook").controller("mainCtrl",function($scope, dataService){
+
+$scope.quotes = dataService.getQuotes();
+})
