@@ -7,9 +7,13 @@
 </head>
 <body ng-controller="mainCtrl">
 
-  {{ test }}
+  <input ng-model="quotes"></input>
 
-  <input ng-model="quoteBook"></input>
+  <p ng-repeat = "quote in quotes track by $index">
+    <span class = 'text'>{{quote.text}}</span>
+    <span class = 'author'> -- {{quote.author}}</span>
+    <button ng-click = "deleteMe(quote.text)">Delete</button>
+  </p>
 
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
      <script src="js/app.js"></script>
