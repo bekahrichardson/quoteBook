@@ -1,1 +1,1 @@
-//app folder
+angular.module('quoteBook', []);

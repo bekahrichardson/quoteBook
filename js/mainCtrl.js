@@ -1,1 +1,3 @@
-//mainCtrl js file
+angular.module('quoteBook').controller('mainCtrl', function($scope){
+
+});
