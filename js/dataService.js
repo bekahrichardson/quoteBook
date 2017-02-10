@@ -1,5 +1,6 @@
 //Set up a service that hides an array of data. The service should then allow you to:
 //get, add, and remove data from that array via exposed functions.
+
 angular.module("quoteBook").service('dataService', function(){
   var quotes = [
     { text: 'Life isn\'t about getting and having, it\'s about giving and being.', author: 'Kevin Kruse'},
@@ -10,13 +11,11 @@ angular.module("quoteBook").service('dataService', function(){
     { text: 'Life is what happens to you while you\'re busy making other plans.', author: 'John Lennon'},
     { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'}
     ];
-  }
 
   this.getQuotes = function(){
     return quotes;
   };
 
-//Returns true on success.
   this.addData = function(newQuote){
     if(newQuote.text && newQuote.author){
       quotes.push(newQuote);
